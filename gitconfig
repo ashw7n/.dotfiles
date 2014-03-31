@@ -1,0 +1,51 @@
+[user]
+	name = Ashwin Raveendran
+	email = ashw7n@gmail.com
+[core]
+	excludesfile = /opt/boxen/config/git/gitignore
+	autocrlf = input
+	editor = /usr/bin/vim --noplugin
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[credential]
+
+[hub]
+protocol = https
+
+[alias]
+	ci = commit
+    	fc = log ORIG_HEAD.. --stat --no-merges	
+    	rh = reset --hard
+    	diffname = diff --name-status -r
+    	diffstat=diff --stat -r
+    	diffprev=diff HEAD~1..
+    	diffprevstat=diff HEAD~1.. --stat
+    	diffprevname=diff HEAD~1.. --name-status
+    rs = remote -v
+   bs = branch -a
+
+[color]
+     branch = auto
+      diff = auto
+       status = auto
+[color "branch"]
+     current = yellow reverse
+      local = yellow
+       remote = green
+[color "diff"]
+     meta = yellow bold
+      frag = magenta bold
+       old = red
+        new = cyan
+[color "status"]
+     added = yellow
+      changed = green
+       untracked = cyan
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
