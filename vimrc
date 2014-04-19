@@ -19,6 +19,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
+Bundle 'terryma/vim-multiple-cursors'
 
 filetype plugin indent on
 
